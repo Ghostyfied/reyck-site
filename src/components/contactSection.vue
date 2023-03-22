@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .contactWrapper {
     font-family: 'Josefin Sans', sans-serif;
-    min-height: 400px;
+    min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
     background: rgb(219,96,87);

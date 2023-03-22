@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .newsWrapper {
-    min-height: 400px;
+    min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
     background: rgb(219,125,119);

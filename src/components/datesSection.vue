@@ -6,13 +6,9 @@
                 <span class="stad">{{ concert[1] }}</span>
                 <span class="locatie">{{ concert[2] }}</span>
 
-                <!-- <div v-if="concert[3] != 'UITVERKOCHT'" class="btn btn-one"> -->
                 <div class="btn btn-one">
-                    <a id="ticketButton">Tickets</a>
+                    <span id="ticketButton">Tickets</span>
                 </div>
-                <!-- <div v-else disabled class="btn btn-one">
-                    <a id="ticketButton">UITVERKOCHT</a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -24,8 +20,6 @@ export default {
     name: "dateSection",
     data() {
         return {
-            // KOEN, kopier de volgende regel volledig (alles na de "//"):
-            // ["22 april 2023", "antwerpen", "De Draak", "UITVERKOCHT" of "https://ticket.link.com"],
             concertArray: [
                 ["12 maart 2023", "Antwerpen", "De Draak", "google.com"],
                 ["13 maart 2023", "Brussel", "De Visser", "UITVERKOCHT"],
@@ -38,7 +32,7 @@ export default {
 <style scoped>
 .datesSectionWrapper {
     width: 100%;
-    min-height: 400px;
+    min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
     background: rgb(219,181,179);

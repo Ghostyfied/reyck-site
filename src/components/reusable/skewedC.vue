@@ -10,9 +10,6 @@ export default {
         color2: String,
         orientation: String,
     },
-    mounted() {
-        console.log(this.orientation);
-    },
     data() {
         return {
             orientationCalculated: this.orientation == "clockwise" ? "left" : "right",
