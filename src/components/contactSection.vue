@@ -1,5 +1,5 @@
 <template>
-    <div class="contactWrapper">
+    <div id="contactSectionWrapper">
         <div id="textWrapper">
             Contact opnemen? Dat kan door ons te mailen via deze link:
             <a href="mailto:Reyckband@hotmail.com">Mail</a>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.contactWrapper {
+#contactSectionWrapper {
     font-family: 'Josefin Sans', sans-serif;
     min-height: 700px;
     grid-column: 1 / 3;

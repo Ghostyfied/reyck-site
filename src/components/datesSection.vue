@@ -1,5 +1,5 @@
 <template>
-    <div class="datesSectionWrapper">
+    <div id="datesSectionWrapper">
         <div class="tableWrapper">
             <div v-for="concert in this.concertArray" class="tableRow">
                 <span class="datum">{{ concert[0] }}</span>
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-.datesSectionWrapper {
+#datesSectionWrapper {
     width: 100%;
     min-height: 700px;
     grid-column: 1 / 3;

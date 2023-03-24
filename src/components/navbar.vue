@@ -1,20 +1,20 @@
 <template>
     <nav class="navbarWrapper" :class="this.stickyNavbarClass">
-        <div class="btn btn-one" id="firstButton" :class="this.stickyNavbarClass">
+        <div class="btn btn-one" @click="scrollToSection('datesSectionWrapper')" id="firstButton" :class="this.stickyNavbarClass">
             <span>Concerts</span>
         </div>
         
-        <div class="btn btn-one" :class="this.stickyNavbarClass">
+        <div class="btn btn-one" @click="scrollToSection('aboutSectionWrapper')" :class="this.stickyNavbarClass">
             <span>About</span>
         </div>
         
         <img class="logoImage" @click="scrollToTop" src="../assets/Reyck_logo_goed-removebg-preview.png"/>
         
-        <div class="btn btn-one" :class="this.stickyNavbarClass">
+        <div class="btn btn-one" @click="scrollToSection('newsSectionWrapper')" :class="this.stickyNavbarClass">
             <span>News</span>
         </div>
 
-        <div class="btn btn-one" :class="this.stickyNavbarClass">
+        <div class="btn btn-one" @click="scrollToSection('contactSectionWrapper')" :class="this.stickyNavbarClass">
             <span>Contact</span>
         </div>
     </nav>
@@ -37,11 +37,18 @@ export default {
         };
     },
     methods: {
+        scrollToSection(percentage) {
+            const y = document.getElementById(percentage).getBoundingClientRect().top + window.scrollY - (0.10 * window.innerHeight);
+            window.scroll({
+                top: y,
+                behavior: 'smooth'
+            });
+        },
         scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         },
         handleScroll (event) {
-            if (window.scrollY > 950) {
+            if (window.scrollY > (0.7 * window.innerHeight)) {
                 this.stickyNavbarClass = "sticky";
             } else if (window.scrollY < 950) {
                 this.stickyNavbarClass = "";

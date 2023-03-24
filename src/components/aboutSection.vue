@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutWrapper">
+    <div id="aboutSectionWrapper">
         <div class="spotifyWidget">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/36t2vlP5OiRO1G7EgxgNvU?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.aboutWrapper {
+#aboutSectionWrapper {
     min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
