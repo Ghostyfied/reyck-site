@@ -6,7 +6,7 @@
 
     <div class="landingWrapper">
         <div class="imageWrapper">
-            <img class="landingImage" src="../assets/groupfoto16-9.jpg" />
+            <img class="landingImage" src="../assets/groupfoto16-9.webp" />
         </div>
         <skewedC id="landingSkewed" color1="rgba(255,255,255,0)" color2="rgb(219,181,179)" orientation="counterClockwise"/>
     </div>

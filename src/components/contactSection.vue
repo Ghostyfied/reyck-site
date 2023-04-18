@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 #contactSectionWrapper {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'enriqueta';
     min-height: 700px;
     grid-column: 1 / 3;
     display: grid;

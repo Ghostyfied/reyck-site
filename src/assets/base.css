@@ -59,14 +59,26 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "enriqueta";
+  src: url("./fonts/Enriqueta-Medium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "overlock";
+  src: url("./fonts/Overlock-Black.ttf") format("opentype");
+}
+@font-face {
+  font-family: "overlockItalic";
+  src: url("./fonts/Overlock-BlackItalic.ttf") format("opentype");
+}
+
 body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

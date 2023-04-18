@@ -1,21 +1,21 @@
 <template>
     <nav class="navbarWrapper" :class="this.stickyNavbarClass">
         <div class="btn btn-one" @click="scrollToSection('datesSectionWrapper')" id="firstButton" :class="this.stickyNavbarClass">
-            <span>Concerts</span>
+            <span>CONCERTEN</span>
         </div>
         
         <div class="btn btn-one" @click="scrollToSection('aboutSectionWrapper')" :class="this.stickyNavbarClass">
-            <span>About</span>
+            <span>OVER</span>
         </div>
         
         <img class="logoImage" @click="scrollToTop" src="../assets/Reyck_logo_goed-removebg-preview.png"/>
         
         <div class="btn btn-one" @click="scrollToSection('newsSectionWrapper')" :class="this.stickyNavbarClass">
-            <span>News</span>
+            <span>NIEUWS</span>
         </div>
 
         <div class="btn btn-one" @click="scrollToSection('contactSectionWrapper')" :class="this.stickyNavbarClass">
-            <span>Contact</span>
+            <span>CONTACT</span>
         </div>
     </nav>
 </template>
@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         scrollToSection(percentage) {
-            const y = document.getElementById(percentage).getBoundingClientRect().top + window.scrollY - (0.10 * window.innerHeight);
+            const y = document.getElementById(percentage).getBoundingClientRect().top + window.scrollY - (0.20 * window.innerHeight);
             window.scroll({
                 top: y,
                 behavior: 'smooth'
@@ -70,15 +70,13 @@ export default {
     display: grid;
     grid-template-columns: [first] 10% [second] 17% [third] 17% [fourth] 12% [fifth] 17% [sixth] 17% [seventh] 10%;
     transition: all 0.2s linear;
+    font-family: 'overlock';
 }
 .navbarWrapper.sticky {
-    /* align-items: start; */
     grid-template-columns: [first] 20% [second] 13% [third] 13% [fourth] 4% [fifth] 13% [sixth] 13% [seventh] 20%;
 }
 .btn {
-    font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
-    line-height: 55px;
     width: 99%;
 }
 .logoImage {

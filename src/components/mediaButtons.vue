@@ -27,10 +27,7 @@ export default {
     grid-template-rows: 4; */
 }
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 30px;
-    height: 30px;
+    padding: 15px;
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
