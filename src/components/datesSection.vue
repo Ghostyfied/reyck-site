@@ -1,20 +1,24 @@
 <template>
     <div id="datesSectionWrapper">
-        <h1 class="sectionTitle">Concert dates</h1>
-        <div class="tableWrapper">
-            <div v-for="concert in this.concertArray" class="tableRow">
-                <span class="title">{{ concert[0] }}</span>
-                <span class="datum border_right">{{ concert[1] }}</span>
-                <span class="stad border_right">{{ concert[2] }}</span>
-                <span class="locatie border_right">{{ concert[3] }}</span>
+        <div class="titleWrapper">
+            <h1 class="sectionTitle">Concert data</h1>
+        </div>
+        <div class="tableContainer">
+            <div class="tableWrapper">
+                <div v-for="concert in this.concertArray" class="tableRow">
+                    <span class="title">{{ concert[0] }}</span>
+                    <span class="datum">{{ concert[1] }}</span>
+                    <span class="stad">{{ concert[2] }}</span>
+                    <span class="locatie">{{ concert[3] }}</span>
 
-                <a v-if="concert[4]" :href="concert[4]" target="_blank">
-                    <div class="btn btn-one ticketButton">
+                    <a v-if="concert[4]" :href="concert[4]" target="_blank">
+                        <div class="btn btn-one ticketButton">
+                            <span id="ticketButtonText">Meer info</span>
+                        </div>
+                    </a>
+                    <div v-else class="btn btn-one disabled ticketButton">
                         <span id="ticketButtonText">Meer info</span>
                     </div>
-                </a>
-                <div v-else class="btn btn-one disabled ticketButton">
-                    <span id="ticketButtonText">Meer info</span>
                 </div>
             </div>
         </div>
@@ -49,18 +53,29 @@ export default {
     min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: [first] 45% [second] 55%;
+    grid-template-columns: 45% 55%;
     background: rgb(219,181,179);
     font-family: 'enriqueta', 'sans-serif';
 }
+.tableContainer {
+    grid-column: 1/3;
+    place-self: center;
+    width: 80%;
+    margin-bottom: 80px;
+    background: #38383851;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .tableWrapper {
     overflow: hidden;
-    width: 80%;
-    place-self: center;
     border-collapse: collapse;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     grid-column: 1 / 3;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 .tableRow {
     font-size: large;
@@ -82,24 +97,31 @@ export default {
     z-index: 99;
     font-family: 'overlockItalic';
 }
-.border_right {
-    border-left: solid thin rgb(255, 242, 242);
-    width: 100%;
-    text-align: center;
-}
 .btn.btn-one.disabled, .btn.btn-one.disabled::after {
     background: rgb(46, 16, 16);
     color: rgb(46, 16, 16);
     cursor: not-allowed;
 }
-.sectionTitle {
+.titleWrapper {
     grid-column: 2;
     place-self: start center;
+    background: #383838;
+    border: 2px solid #000000;
+    border-bottom: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 12px 3px 2px 1px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.sectionTitle {
     font-size: 40px;
     font-family: 'overlock';
     color: rgb(255, 255, 255);
+    margin-left: 40px;
+    margin-right: 40px;
 }
 .ticketButton {
     font-size: 25px;
+    border-radius: 10px;
 }
 </style>
