@@ -65,7 +65,6 @@ export default {
     background: #38383851;
     border: 2px solid #000000;
     border-radius: 10px;
-    z-index: 1000;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .tableWrapper {
@@ -111,7 +110,6 @@ export default {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     box-shadow: 12px 3px 2px 1px rgba(0, 0, 0, 0.2);
-    z-index: 10;
 }
 .sectionTitle {
     font-size: 40px;
