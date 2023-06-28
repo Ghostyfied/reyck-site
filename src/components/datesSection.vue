@@ -10,6 +10,7 @@
                     <span class="datum">{{ concert[1] }}</span>
                     <span class="stad">{{ concert[2] }}</span>
                     <span class="locatie">{{ concert[3] }}</span>
+                </div>
 
                 <!-- <a class="buttonRef" > -->
                 <div class="btn btn-one ticketButton" v-if="concert[4]" @click="navigateToLink(concert[4])">
