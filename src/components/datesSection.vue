@@ -8,12 +8,12 @@
                 <span class="stad border_right">{{ concert[2] }}</span>
                 <span class="locatie border_right">{{ concert[3] }}</span>
 
-                <a v-if="concert[4]" :href="concert[4]" target="_blank">
-                    <div class="btn btn-one ticketButton">
-                        <span id="ticketButtonText">Meer info</span>
-                    </div>
-                </a>
-                <div v-else class="btn btn-one disabled ticketButton">
+                <!-- <a class="buttonRef" > -->
+                <div class="btn btn-one ticketButton" v-if="concert[4]" @click="navigateToLink(concert[4])">
+                    <span id="ticketButtonText">Meer info</span>
+                </div>
+                <!-- </a> -->
+                <div v-else class="btn btn-one ticketButton">
                     <span id="ticketButtonText">Meer info</span>
                 </div>
             </div>
@@ -39,7 +39,12 @@ export default {
                 ["Trek Den Haag", "9 september 2023", "Den Haag", "Westbroekpark", ""],
             ],
         }
-    }
+    },
+    methods: {
+        navigateToLink(link) {
+            window.open(link, "_blank");
+        }
+    },
 }
 </script>
 
@@ -87,11 +92,6 @@ export default {
     width: 100%;
     text-align: center;
 }
-.btn.btn-one.disabled, .btn.btn-one.disabled::after {
-    background: rgb(46, 16, 16);
-    color: rgb(46, 16, 16);
-    cursor: not-allowed;
-}
 .sectionTitle {
     grid-column: 2;
     place-self: start center;
@@ -101,5 +101,8 @@ export default {
 }
 .ticketButton {
     font-size: 25px;
+}
+.buttonRef {
+    color: rgb(255, 255, 255);
 }
 </style>

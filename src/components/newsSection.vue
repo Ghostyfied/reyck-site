@@ -49,6 +49,5 @@ export default {
     place-self: start center;
     font-size: 40px;
     font-family: 'overlock';
-    color: 
 }
 </style>
