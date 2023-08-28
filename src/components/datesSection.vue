@@ -28,15 +28,13 @@ export default {
     data() {
         return {
             concertArray: [
-                ["Uitloopconcert Deus", "18 april 2023", "Utrecht", "Tivoli Vredenburg", "https://www.tivolivredenburg.nl/agenda/deus-17-04-2023"],
-                ["Finale Parel van de Betuwe", "21 april 2023", "Culemborg", "De Gelderlandfabriek", "https://www.degelderlandfabriek.nl/agenda/archief/finale-parel-van-de-betuwe/"],
-                ["Bevrijdingsfestival", "6 mei 2023", "Geldermalsen", "De Beurs Schenkerij", ""],
-                ["Trek Maastricht", "20 mei 2023", "Maastricht", "Stadspark Maastricht", "https://www.festival-trek.nl/"],
-                ["Trek Utrecht", "27 mei 2023", "Utrecht", "Griftpark", "https://www.festival-trek.nl/"],
-                ["Amsterdam Dormsession", "11 juni 2023", "Amsterdam", "Verbroederij", ""],
-                ["Reyck & Suite Paranoia", "12 juni 2023", "Nijmegen", "Cafe Ergens", ""],
-                ["Recyk & Suite Paranoia", "13 juni 2023", "Nijmegen", "Het Paleis", ""],
-                ["Trek Den Haag", "9 september 2023", "Den Haag", "Westbroekpark", ""],
+                ["Bergen Live", "2 Sep. 2023", "Bergen", "Bergen Live", "https://bergenlive.nl/talent-on-stage/#1691919329801-f14f9b2d-e176"],
+                ["Trek Den Haag", "9 Sep. 2023", "Den Haag", "Westbroekpark", "https://www.festival-trek.nl/"],
+                ["Ekko on stage", "16 Sep. 2023", "Utrecht", "Ekko", "https://ekko.nl/event/ekko-on-stage/"],
+                ["Café Stathe", "28 Sep. 2023", "Utrecht", "Café stathe", "https://www.stathe.nl/"],
+                ["'Buitenaards' release party", "26 Okt. 2023", "Utrecht", "Café Hofman", "https://hofman-utrecht.nl/"],
+                ["'Vanavond gaat ze dansen' release party", "15 Dec. 2023", "Den Haag", "Paardcafé", "https://www.paard.nl/paardcafe/"],
+                ["Ep release party", "15 Maart 2023", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
             ],
         }
     },

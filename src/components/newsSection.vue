@@ -43,6 +43,8 @@ export default {
     width: 100%;
     place-self: center;
     grid-column: 2 / 4;
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
 .sectionTitle {
     grid-column: 3;
