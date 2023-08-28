@@ -1,23 +1,19 @@
 <template>
     <div id="datesSectionWrapper">
-        <div class="titleWrapper">
-            <h1 class="sectionTitle">Concert data</h1>
-        </div>
-        <div class="tableContainer">
-            <div class="tableWrapper">
-                <div v-for="concert in this.concertArray" class="tableRow">
-                    <span class="title">{{ concert[0] }}</span>
-                    <span class="datum">{{ concert[1] }}</span>
-                    <span class="stad">{{ concert[2] }}</span>
-                    <span class="locatie">{{ concert[3] }}</span>
-                </div>
+        <h1 class="sectionTitle">Concert dates</h1>
+        <div class="tableWrapper">
+            <div v-for="concert in this.concertArray" class="tableRow">
+                <span class="title">{{ concert[0] }}</span>
+                <span class="datum border_right">{{ concert[1] }}</span>
+                <span class="stad border_right">{{ concert[2] }}</span>
+                <span class="locatie border_right">{{ concert[3] }}</span>
 
                 <!-- <a class="buttonRef" > -->
                 <div class="btn btn-one ticketButton" v-if="concert[4]" @click="navigateToLink(concert[4])">
                     <span id="ticketButtonText">Meer info</span>
                 </div>
                 <!-- </a> -->
-                <div v-else class="btn btn-one ticketButton">
+                <div v-else class="btn btn-one ticketButton off">
                     <span id="ticketButtonText">Meer info</span>
                 </div>
             </div>
@@ -58,28 +54,18 @@ export default {
     min-height: 700px;
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 45% 55%;
+    grid-template-columns: [first] 45% [second] 55%;
     background: rgb(219,181,179);
     font-family: 'enriqueta', 'sans-serif';
 }
-.tableContainer {
-    grid-column: 1/3;
-    place-self: center;
-    width: 80%;
-    margin-bottom: 80px;
-    background: #38383851;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-}
 .tableWrapper {
     overflow: hidden;
+    width: 80%;
+    place-self: center;
     border-collapse: collapse;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     grid-column: 1 / 3;
-    margin-left: 40px;
-    margin-right: 40px;
 }
 .tableRow {
     font-size: large;
@@ -109,23 +95,17 @@ export default {
 .sectionTitle {
     grid-column: 2;
     place-self: start center;
-    background: #383838;
-    border: 2px solid #000000;
-    border-bottom: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    box-shadow: 12px 3px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.sectionTitle {
     font-size: 40px;
     font-family: 'overlock';
     color: rgb(255, 255, 255);
-    margin-left: 40px;
-    margin-right: 40px;
 }
 .ticketButton {
     font-size: 25px;
-    border-radius: 10px;
+}
+.ticketButton.off {
+    background: rgb(100, 90, 90);
+    color: rgb(100, 90, 90);
+    border: solid thin rgb(219,181,179);
 }
 .buttonRef {
     color: rgb(255, 255, 255);
