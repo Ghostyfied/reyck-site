@@ -22,7 +22,7 @@ export default {
 
 <style>
 .mediaButtons {
-    z-index: 99;
+    z-index: 99999;
     margin-right: 30px;
     margin-bottom: 30px;
     position: fixed;
