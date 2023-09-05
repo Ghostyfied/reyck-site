@@ -3,16 +3,15 @@
         <h1 class="sectionTitle">Contact</h1>
         <div id="textWrapper">
             Contact opnemen? Dat kan door ons te mailen via deze link:
-            <a href="mailto:Reyckband@hotmail.com">Mail</a><br><br>
+            <a href="mailto:Reyckband@hotmail.com" class="contactLink">Mail</a><br><br>
             Of geef ons een belletje op het volgende nummer:
-            +31 6 39690206
+            <span class="contactNumber">+31 6 39690206</span>
         </div>
     </div>
     <skewedC color1="rgb(219,96,87)" color2="rgb(219,66,55)" orientation="counterClockwise"/>
 </template>
 
 <script>
-
 export default {
     name: "contactSection",
 }
@@ -22,20 +21,21 @@ export default {
 #contactSectionWrapper {
     font-family: 'enriqueta';
     min-height: 500px;
-    grid-column: 1 / 3;
-    display: grid;
     background: rgb(219,96,87);
     color: #fff;
-    grid-template-columns: [first] 10% [second] 30% [third] 50% [fourth] 10%;
-    grid-template-rows: 10% 90%;
+    display: grid;
+    grid-template-columns: 10% 30% 50% 10%;
+    grid-gap: 20px;
 }
+
 #textWrapper {
     width: 80%;
     place-self: center;
     font-weight: 700;
     grid-column: 2 / 4;
-    font-size: large;
+    font-size: 18px;
 }
+
 .sectionTitle {
     grid-column: 2;
     place-self: start center;
@@ -43,4 +43,40 @@ export default {
     font-family: 'overlock';
 }
 
+.contactLink, .contactNumber {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #contactSectionWrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid-gap: 10px;
+    }
+
+    .sectionTitle {
+        grid-column: 1;
+        width: 90%;
+        font-size: 30px;
+    }
+
+    #textWrapper {
+        grid-column: 1;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 24px;
+    }
+
+    #textWrapper {
+        width: 80%;
+    }
+}
 </style>

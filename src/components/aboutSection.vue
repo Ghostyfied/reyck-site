@@ -19,7 +19,6 @@
 </template>
 
 <script>
-
 export default {
     name: "aboutSection",
 }
@@ -28,14 +27,14 @@ export default {
 <style scoped>
 #aboutSectionWrapper {
     min-height: 700px;
-    grid-column: 1 / 3;
     background: rgb(219,160,157);
     color: #fff;
     display: grid;
-    grid-template-columns: [first] 10% [second] 30% [third] 50% [fourth] 10%;
-    grid-template-rows: [first] 10% [second] 90%;
+    grid-template-columns: 10% 30% 50% 10%;
+    grid-gap: 40px;  /* Added to introduce space between rows */
     font-family: 'overlock';
 }
+
 #textWrapper {
     font-weight: 700;
     font-size: 20px;
@@ -43,11 +42,13 @@ export default {
     place-self: center;
     grid-column: 3;
 }
+
 .spotifyWidget {
-    width: 70%;
+    width: 60%;  /* Reduced from 70% to 60% */
     grid-column: 2;
     place-self: center;
 }
+
 .sectionTitle {
     grid-column: 2;
     place-self: start center;
@@ -55,4 +56,42 @@ export default {
     font-family: 'overlock';
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+    #aboutSectionWrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #textWrapper, .spotifyWidget, .sectionTitle {
+        grid-column: 1;
+        width: 90%;
+    }
+
+    .spotifyWidget {
+        width: 80%;  /* Adjusted for smaller screens */
+    }
+
+    .sectionTitle {
+        font-size: 30px;
+    }
+
+    #textWrapper {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 24px;
+    }
+
+    #textWrapper {
+        font-size: 16px;
+    }
+
+    .spotifyWidget {
+        width: 90%;  /* Adjusted again for very small screens */
+    }
+}
 </style>

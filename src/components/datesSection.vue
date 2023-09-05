@@ -9,9 +9,9 @@
                 <span class="locatie border_right">{{ concert[3] }}</span>
 
                 <!-- <a class="buttonRef" > -->
-                <div class="btn btn-one ticketButton" v-if="concert[4]" @click="navigateToLink(concert[4])">
-                    <span id="ticketButtonText">Meer info</span>
-                </div>
+                    <div class="btn btn-one ticketButton" v-if="concert[4]" @click="navigateToLink(concert[4], $event)">
+                        <span id="ticketButtonText">Meer info</span>
+                    </div>
                 <!-- </a> -->
                 <div v-else class="btn btn-one ticketButton off">
                     <span id="ticketButtonText">Meer info</span>
@@ -39,10 +39,14 @@ export default {
         }
     },
     methods: {
-        navigateToLink(link) {
-            window.open(link, "_blank");
+    navigateToLink(link, event) {
+        window.open(link, "_blank");
+
+        if (event && event.target) {
+            event.target.blur();
         }
-    },
+    }
+}
 }
 </script>
 
@@ -75,10 +79,12 @@ export default {
 }
 .tableRow span {
     place-self: center;
+    text-align: center;
     color: rgb(255, 242, 242);
 }
 .title {
     grid-column: 1;
+    font-size: 22px;  /* Adjust to your preferred size */
 }
 #ticketButtonText {
     color: #ffffff;
@@ -107,5 +113,61 @@ export default {
 }
 .buttonRef {
     color: rgb(255, 255, 255);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .tableRow {
+        border-bottom: none thin rgb(255, 242, 242);
+    }
+    .tableWrapper {
+        width: 95%;
+    }
+
+    .tableRow {
+        grid-template-columns: 2fr;
+        font-size: 16px;
+    }
+
+    .title, .datum, .stad, .locatie {
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .border_right {
+        border-left: none;
+        border-bottom: solid thin rgb(255, 242, 242);
+    }
+
+    .ticketButton {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .sectionTitle {
+        font-size: 30px;
+    }
+
+    .tableRow:not(:last-child) {
+        margin-bottom: 40px; /* or whatever value you prefer */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sectionTitle {
+        grid-column: 1/3;
+    }
+    .sectionTitle {
+        font-size: 26px;
+    }
+
+    .tableRow {
+        font-size: 14px;
+    }
+
+    .ticketButton {
+        font-size: 16px;
+    }
 }
 </style>

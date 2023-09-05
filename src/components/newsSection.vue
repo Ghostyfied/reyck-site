@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
     name: "newsSection",
     async mounted() {
@@ -31,25 +30,53 @@ export default {
 <style scoped>
 #newsSectionWrapper {
     min-height: 700px;
-    grid-column: 1 / 3;
-    display: grid;
     background: rgb(219,125,119);
     color: #fff;
-    grid-template-columns: [first] 10% [second] 35% [third] 45% [fourth] 10%;
-    grid-template-rows: [first] 10% [second] 90%;
+    display: grid;
+    grid-template-columns: 10% 35% 45% 10%;
+    grid-gap: 40px; /* Providing gap between rows for a more spaced look */
     font-family: 'enriqueta';
 }
+
 .instaWidget {
     width: 100%;
     place-self: center;
     grid-column: 2 / 4;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin: 50px 0; /* Providing consistent space around the widget */
 }
+
 .sectionTitle {
     grid-column: 3;
     place-self: start center;
     font-size: 40px;
     font-family: 'overlock';
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #newsSectionWrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .instaWidget {
+        grid-column: 1;
+        width: 90%;
+    }
+
+    .sectionTitle {
+        grid-column: 1;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitle {
+        font-size: 24px;
+    }
+
+    .instaWidget {
+        width: 80%;
+    }
 }
 </style>

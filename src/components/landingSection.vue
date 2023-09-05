@@ -1,12 +1,8 @@
 <template>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-
-
     <div class="landingWrapper">
         <div class="imageWrapper">
-            <img class="landingImage" src="../assets/groupfoto16-9.webp" />
+            <img class="landingImage" src="../assets/buitenaards-release.png" />
+            <a href="#" data-ae-follow-link="spotify" data-ae-album-id="2jUjrmnCfEEwvC4H2twuTI">Spotify presave</a>
         </div>
         <skewedC id="landingSkewed" color1="rgba(255,255,255,0)" color2="rgb(219,181,179)" orientation="counterClockwise"/>
     </div>
@@ -19,6 +15,7 @@ export default {
 </script>
 
 <style scoped>
+/* Base styles */
 .landingWrapper {
     grid-row: 1;
     grid-column: 1 / 3;
@@ -31,13 +28,86 @@ export default {
     overflow: hidden;
     grid-row: 1 / 3;
     grid-column: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.imageWrapper::before, .imageWrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust to the desired border thickness */
+    background: rgb(219,181,179); /* Match the color of #landingSkewed */
+    z-index: 3; /* To make sure the border stays above the image */
+}
+
+.imageWrapper::before {
+    top: 0;
+    background: 
+        linear-gradient(to left, rgb(219,181,179) 44%, transparent 44%, transparent 60%, rgb(219,181,179) 60%),
+        linear-gradient(to right, rgb(219,181,179) 44%, transparent 44%, transparent 60%, rgb(219,181,179) 60%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.imageWrapper::after {
+    bottom: 0;
+    background: rgb(219,181,179);
+}
+
 .landingImage {
     width: 100%;
     height: auto;
+    z-index: 1;
+    border-left: 10px double rgb(219,181,179); 
+    border-right: 10px double rgb(219,181,179); 
+    box-sizing: border-box;
+}
+
+a[data-ae-follow-link="spotify"] {
+    position: absolute;
+    z-index: 2;
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+    transform: translateX(-50%);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
 }
 #landingSkewed {
     grid-row: 2;
     align-self: end;
+    z-index: 100;
+}
+
+/* For tablet screens */
+@media (max-width: 768px) {
+    /* Adjustments for tablet screens here, if needed. E.g., font sizes, padding, etc. */
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .landingImage {
+        border-left: 5px double rgb(219,181,179);
+        border-right: 5px double rgb(219,181,179);
+    }
+
+    .imageWrapper::before, .imageWrapper::after {
+        height: 5px;
+    }
+
+    a[data-ae-follow-link="spotify"] {
+        padding: 3px 7px;
+        font-size: 12px; /* Optional: if the text appears too big on mobile */
+    }
 }
 </style>

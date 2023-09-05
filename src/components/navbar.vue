@@ -58,6 +58,7 @@ export default {
 }
 </script>
 
+
 <style>
 .navbarWrapper {
     position: sticky;
@@ -68,17 +69,19 @@ export default {
     grid-row: 1 / 2;
     z-index: 10;
     display: grid;
-    grid-template-columns: [first] 10% [second] 17% [third] 17% [fourth] 12% [fifth] 17% [sixth] 17% [seventh] 10%;
+    grid-template-columns: 1fr 15% 15% 12% 15% 15% 1fr;
     transition: all 0.2s linear;
     font-family: 'overlock';
 }
 .navbarWrapper.sticky {
-    grid-template-columns: [first] 20% [second] 13% [third] 13% [fourth] 4% [fifth] 13% [sixth] 13% [seventh] 20%;
+    grid-template-columns: 20% 13% 13% 4% 13% 13% 20%;
 }
+
 .btn {
     font-size: 30px;
     width: 99%;
 }
+
 .logoImage {
     grid-column: 4;
     z-index: 10;
@@ -89,7 +92,49 @@ export default {
     margin-left: 7%;
     cursor: pointer;
 }
+
 #firstButton {
     grid-column: 2/3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 14% 14% 12% 14% 14% 1fr;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+    
+    .logoImage {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 13% 13% 11% 13% 13% 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 12% 12% 10% 12% 12% 1fr;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+    
+    .logoImage {
+        width: 70%;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 11% 11% 9% 11% 11% 1fr;
+    }
 }
 </style>
