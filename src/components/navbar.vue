@@ -98,7 +98,7 @@ export default {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navbarWrapper {
         grid-template-columns: 1fr 14% 14% 12% 14% 14% 1fr;
     }

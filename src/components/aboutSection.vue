@@ -31,7 +31,7 @@ export default {
     color: #fff;
     display: grid;
     grid-template-columns: 10% 30% 50% 10%;
-    grid-gap: 40px;  /* Added to introduce space between rows */
+    grid-template-rows: 10% 80% 10%;
     font-family: 'overlock';
 }
 
@@ -46,38 +46,46 @@ export default {
 .spotifyWidget {
     width: 60%;  /* Reduced from 70% to 60% */
     grid-column: 2;
-    place-self: center;
+    place-self: center center;
 }
 
 .sectionTitle {
     grid-column: 2;
-    place-self: start center;
+    place-self: center center;
     font-size: 40px;
     font-family: 'overlock';
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     #aboutSectionWrapper {
         grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto; /* You may set explicit row heights if needed */
         text-align: center;
     }
 
-    #textWrapper, .spotifyWidget, .sectionTitle {
+    .sectionTitle {
         grid-column: 1;
+        grid-row: 1;
+        font-size: 30px;
+        margin-top: 5%;
         width: 90%;
+        margin-bottom: 5%;
     }
 
     .spotifyWidget {
-        width: 80%;  /* Adjusted for smaller screens */
-    }
-
-    .sectionTitle {
-        font-size: 30px;
+        grid-column: 1;
+        grid-row: 2; /* Explicitly set to row 2 */
+        width: 50%;  /* Adjusted for smaller screens */
+        margin-bottom: 5%;
     }
 
     #textWrapper {
+        grid-column: 1;
+        grid-row: 3; /* Explicitly set to row 3 */
         font-size: 18px;
+        width: 65%;
+        margin-bottom: 5%;
     }
 }
 
@@ -88,10 +96,7 @@ export default {
 
     #textWrapper {
         font-size: 16px;
-    }
-
-    .spotifyWidget {
-        width: 90%;  /* Adjusted again for very small screens */
+        width: 70%;
     }
 }
 </style>

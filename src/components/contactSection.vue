@@ -25,7 +25,7 @@ export default {
     color: #fff;
     display: grid;
     grid-template-columns: 10% 30% 50% 10%;
-    grid-gap: 20px;
+    grid-template-rows: 10% 80% 10%;
 }
 
 #textWrapper {
@@ -38,7 +38,7 @@ export default {
 
 .sectionTitle {
     grid-column: 2;
-    place-self: start center;
+    place-self: center center;
     font-size: 40px;
     font-family: 'overlock';
 }
@@ -51,17 +51,17 @@ export default {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     #contactSectionWrapper {
         grid-template-columns: 1fr;
         text-align: center;
-        grid-gap: 10px;
     }
 
     .sectionTitle {
         grid-column: 1;
         width: 90%;
         font-size: 30px;
+        margin-top: 5%;
     }
 
     #textWrapper {

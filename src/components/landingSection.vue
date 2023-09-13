@@ -21,12 +21,12 @@ export default {
     grid-column: 1 / 3;
     display: grid;
     grid-template-columns: [first] 100%;
-    grid-template-rows: [first] 15% [second] 85%;
+    grid-template-rows: [first] 15% [second] 70% [third] 15%;
     background: rgb(219,181,179);
 }
 .imageWrapper {
     overflow: hidden;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
     grid-column: 1;
     position: relative;
     display: flex;
@@ -84,13 +84,13 @@ a[data-ae-follow-link="spotify"] {
     }
 }
 #landingSkewed {
-    grid-row: 2;
+    grid-row: 3;
     align-self: end;
     z-index: 100;
 }
 
 /* For tablet screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     /* Adjustments for tablet screens here, if needed. E.g., font sizes, padding, etc. */
 }
 

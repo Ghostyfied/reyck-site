@@ -34,7 +34,7 @@ export default {
     color: #fff;
     display: grid;
     grid-template-columns: 10% 35% 45% 10%;
-    grid-gap: 40px; /* Providing gap between rows for a more spaced look */
+    grid-template-rows: 10% 80% 10%;
     font-family: 'enriqueta';
 }
 
@@ -47,7 +47,7 @@ export default {
 
 .sectionTitle {
     grid-column: 3;
-    place-self: start center;
+    place-self: center center;
     font-size: 40px;
     font-family: 'overlock';
 }
@@ -61,10 +61,12 @@ export default {
 
     .instaWidget {
         grid-column: 1;
-        width: 90%;
+        width: 80%;
+        grid-row: 2/4;
     }
 
     .sectionTitle {
+        margin-top: 5%;
         grid-column: 1;
         font-size: 30px;
     }
@@ -76,7 +78,7 @@ export default {
     }
 
     .instaWidget {
-        width: 80%;
+        width: 60%;
     }
 }
 </style>

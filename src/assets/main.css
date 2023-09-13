@@ -86,3 +86,26 @@ a,
     left: 0px;
     grid-column: 1/3;
 }
+
+/* For tablet screens */
+@media (max-width: 800px) {
+  /* Adjustments for tablet screens here, if needed. E.g., font sizes, padding, etc. */
+  .skewedC, .skewedCC {
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    grid-column: 1/3;
+}
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+  /* Adjustments for mobile screens here, if needed. E.g., font sizes, padding, etc. */
+  .skewedC, .skewedCC {
+    width: 100%;
+    height: 20px;
+    left: 0px;
+    grid-column: 1/3;
+}
+  
+}

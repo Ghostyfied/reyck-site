@@ -65,7 +65,7 @@ export default {
     width: 80%;
     place-self: center;
     border-collapse: collapse;
-    margin-top: 80px;
+    margin-top: 4%;
     margin-bottom: 80px;
     grid-column: 1 / 3;
 }
@@ -116,7 +116,7 @@ export default {
 }
 
 /* Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .tableRow {
         border-bottom: none thin rgb(255, 242, 242);
     }
@@ -146,6 +146,8 @@ export default {
     
     .sectionTitle {
         font-size: 30px;
+        grid-column: 1/3;
+        margin-top: 5%;
     }
 
     .tableRow:not(:last-child) {
@@ -157,8 +159,6 @@ export default {
 
     .sectionTitle {
         grid-column: 1/3;
-    }
-    .sectionTitle {
         font-size: 26px;
     }
 
