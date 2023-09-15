@@ -80,6 +80,7 @@ export default {
 .btn {
     font-size: 30px;
     width: 99%;
+    text-align: center;
 }
 
 .logoImage {
@@ -96,15 +97,14 @@ export default {
 #firstButton {
     grid-column: 2/3;
 }
-
-/* Responsiveness */
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
     .navbarWrapper {
         grid-template-columns: 1fr 14% 14% 12% 14% 14% 1fr;
     }
 
     .btn {
         font-size: 18px;
+        height: 80%;
     }
     
     .logoImage {
@@ -112,29 +112,60 @@ export default {
     }
 }
 
-@media (max-width: 600px) {
+/* Responsiveness */
+@media (max-width: 800px) {
     .navbarWrapper {
-        grid-template-columns: 1fr 13% 13% 11% 13% 13% 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbarWrapper {
-        grid-template-columns: 1fr 12% 12% 10% 12% 12% 1fr;
+        grid-template-columns: 1fr 20% 20% 20% 20% 20% 1fr;
     }
 
     .btn {
-        font-size: 14px;
+        font-size: 18px;
+        height: 50% !important;
     }
     
     .logoImage {
-        width: 70%;
+        width: 80%;
+    }
+    #firstButton {
+        grid-column: 2;
+    }
+    .logoImage {
+        grid-column: 4;
+    }
+}
+@media (max-width: 600px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 20% 20% 20% 20% 20% 1fr;
+    }
+}
+@media (max-width: 480px) {
+    .navbarWrapper {
+        grid-template-columns: 1fr 20% 20% 20% 20% 20% 1fr;
+    }
+
+    .btn {
+        font-size: 10px;
+    }
+
+    .logoImage {
+        width: 100%;
+        margin-left: 0;
     }
 }
 
+
 @media (max-width: 360px) {
     .navbarWrapper {
-        grid-template-columns: 1fr 11% 11% 9% 11% 11% 1fr;
+        grid-template-columns: 1fr 20% 20% 20% 20% 20% 1fr;
+    }
+
+    .btn {
+        font-size: 8px;
+    }
+
+    .logoImage {
+        width: 100%;
+        margin-left: 0;
     }
 }
 </style>

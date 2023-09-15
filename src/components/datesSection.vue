@@ -1,6 +1,6 @@
 <template>
     <div id="datesSectionWrapper">
-        <h1 class="sectionTitle">Concert dates</h1>
+        <h1 class="sectionTitle">Concert data</h1>
         <div class="tableWrapper">
             <div v-for="concert in this.concertArray" class="tableRow">
                 <span class="title">{{ concert[0] }}</span>

@@ -76,7 +76,7 @@ export default {
     .spotifyWidget {
         grid-column: 1;
         grid-row: 2; /* Explicitly set to row 2 */
-        width: 50%;  /* Adjusted for smaller screens */
+        width: 60%;  /* Adjusted for smaller screens */
         margin-bottom: 5%;
     }
 
