@@ -28,12 +28,10 @@ export default {
     data() {
         return {
             concertArray: [
-                ["Bergen Live", "2 Sep. 2023", "Bergen", "Bergen Live", "https://bergenlive.nl/talent-on-stage/#1691919329801-f14f9b2d-e176"],
-                ["Trek Den Haag", "9 Sep. 2023", "Den Haag", "Westbroekpark", "https://www.festival-trek.nl/"],
-                ["Ekko on stage", "16 Sep. 2023", "Utrecht", "Ekko", "https://ekko.nl/event/ekko-on-stage/"],
-                ["Café Stathe", "28 Sep. 2023", "Utrecht", "Café stathe", "https://www.stathe.nl/"],
                 ["'Buitenaards' release party", "26 Okt. 2023", "Utrecht", "Café Hofman", "https://hofman-utrecht.nl/"],
+                ["The Sunrise Paradise", "23 Nov. 2023", "Haarlem", "Patronaat", "https://patronaat.nl/event/the-sunrise-paradise-23-11-23/"],
                 ["'Vanavond gaat ze dansen' release party", "15 Dec. 2023", "Den Haag", "Paardcafé", "https://www.paard.nl/paardcafe/"],
+                ["Reyck viert Kerst", "22 Dec. 2023", "Utrecht", "Café ‘t Pothuys", "https://www.pothuys.nl/"],
                 ["Ep release party", "15 Maart 2023", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
             ],
         }
