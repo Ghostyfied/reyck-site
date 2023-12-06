@@ -1,7 +1,7 @@
 <template>
     <div class="landingWrapper">
         <div class="imageWrapper">
-            <img class="landingImage" src="../assets/buitenaards-release.png" />
+            <img class="landingImage" src="../assets/buitenaards-release-6-12-23.webp" />
             <a href="https://boep.lnk.to/vgzd" class="spotifyPresave scale-up" data-ae-follow-link="spotify" data-ae-album-id="2jUjrmnCfEEwvC4H2twuTI">
                 <img src="../assets/spotify.svg" class="spotify-icon" alt="Spotify Logo" />
                 Spotify presave
