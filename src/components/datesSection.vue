@@ -28,10 +28,8 @@ export default {
     data() {
         return {
             concertArray: [
-                ["'Buitenaards' release party", "26 Okt. 2023", "Utrecht", "Café Hofman", "https://hofman-utrecht.nl/"],
-                ["The Sunrise Paradise", "23 Nov. 2023", "Haarlem", "Patronaat", "https://patronaat.nl/event/the-sunrise-paradise-23-11-23/"],
                 ["'Vanavond gaat ze dansen' release party", "15 Dec. 2023", "Den Haag", "Paardcafé", "https://www.paard.nl/paardcafe/"],
-                ["Reyck viert Kerst", "22 Dec. 2023", "Utrecht", "Café ‘t Pothuys", "https://www.pothuys.nl/"],
+                ["Reyck viert Kerst", "22 Dec. 2023", "Utrecht", "'t Oude Pothuys", "https://www.pothuys.nl/"],
                 ["Ep release party", "15 Maart 2023", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
             ],
         }

@@ -2,7 +2,7 @@
     <div class="landingWrapper">
         <div class="imageWrapper">
             <img class="landingImage" src="../assets/buitenaards-release.png" />
-            <a href="https://boep.lnk.to/upLG5U" class="spotifyPresave scale-up" data-ae-follow-link="spotify" data-ae-album-id="2jUjrmnCfEEwvC4H2twuTI">
+            <a href="https://boep.lnk.to/vgzd" class="spotifyPresave scale-up" data-ae-follow-link="spotify" data-ae-album-id="2jUjrmnCfEEwvC4H2twuTI">
                 <img src="../assets/spotify.svg" class="spotify-icon" alt="Spotify Logo" />
                 Spotify presave
             </a>
