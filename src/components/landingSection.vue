@@ -1,11 +1,10 @@
 <template>
     <div class="landingWrapper">
         <div class="imageWrapper">
-            <img class="landingImage" src="../assets/buitenaards-release-6-12-23.webp" />
-            <a href="https://boep.lnk.to/vgzd" class="spotifyPresave scale-up" data-ae-follow-link="spotify" data-ae-album-id="2jUjrmnCfEEwvC4H2twuTI">
-                <img src="../assets/spotify.svg" class="spotify-icon" alt="Spotify Logo" />
-                Spotify presave
-            </a>
+            <img class="landingImage" src="../assets/Dansen-release-party.webp" />
+            <div class="spotify">
+                <button class="button-49" @click="redirectToLink">Tickets</button>
+            </div>
         </div>
         <skewedC id="landingSkewed" color1="rgba(255,255,255,0)" color2="rgb(219,181,179)" orientation="counterClockwise"/>
     </div>
@@ -14,6 +13,12 @@
 <script>
 export default {
     name: "landingSection",
+    methods: {
+        redirectToLink() {
+            const externalLink = "https://www.bitterzoet.com/event/plan-ep-release/";
+            window.location.href = externalLink;
+        }
+    }
 }
 </script>
 
@@ -70,28 +75,19 @@ export default {
     box-sizing: border-box;
 }
 
-a[data-ae-follow-link="spotify"] {
+.spotify {
     position: absolute;
     z-index: 2;
     text-decoration: none;
-    color: white;
     padding: 5px 10px;
-    transition: all 0.3s ease;
-    transform: translateX(-30%) scale(1.5);
-    background: #1DB954;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-
+    transform: translate(-16%) scale(1.5); 
     flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     justify-content: center;
     width: auto;
     min-width: 150px;
-}
-a[data-ae-follow-link="spotify"]:hover {
-    background: #1AA34A;
+    cursor: pointer;
 }
 .spotify-icon {
     margin-right: 8px;
@@ -99,6 +95,8 @@ a[data-ae-follow-link="spotify"]:hover {
     max-width: 20px;
     max-height: 20px;
 }
+
+
 #landingSkewed {
     grid-row: 3;
     align-self: end;
@@ -106,14 +104,14 @@ a[data-ae-follow-link="spotify"]:hover {
 }
 @media (max-width: 1400px) {
 a[data-ae-follow-link="spotify"] {
-    transform: translateX(-20%) scale(1);
+    transform: translate(-12%) scale(1);
 }
 }
 
 /* For tablet screens */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 a[data-ae-follow-link="spotify"] {
-    transform: translateX(-10%) scale(0.7);
+    transform: translate(-9%) scale(0.6);
 }
 }
 
@@ -124,7 +122,7 @@ a[data-ae-follow-link="spotify"] {
         border-right: 5px double rgb(219,181,179);
     }
     a[data-ae-follow-link="spotify"] {
-        transform: translateX(-5%) scale(0.5);
+        transform: translate(-7%) scale(0.4);
     }
 
     .imageWrapper::before, .imageWrapper::after {
@@ -135,5 +133,108 @@ a[data-ae-follow-link="spotify"] {
         padding: 3px 7px;
         font-size: 12px; /* Optional: if the text appears too big on mobile */
     }
+}
+
+/* CSS */
+.button-49,
+.button-49:after {
+    cursor: pointer;
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #d47d78 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #d7b5b3;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'BITTERZOET';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #ff7b00;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, rgb(219,160,157) 3%, rgb(208, 100, 95) 5%, rgb(219,96,87) 5%);
+  text-shadow: -3px -3px 0px #d60a0a, 3px 3px 0px #8f2222b0;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1.5s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
 }
 </style>

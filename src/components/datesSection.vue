@@ -28,9 +28,8 @@ export default {
     data() {
         return {
             concertArray: [
-                ["'Vanavond gaat ze dansen' release party", "15 Dec. 2023", "Den Haag", "Paardcafé", "https://www.paard.nl/paardcafe/"],
-                ["Reyck viert Kerst", "22 Dec. 2023", "Utrecht", "'t Oude Pothuys", "https://www.pothuys.nl/"],
-                ["Ep release party", "15 Maart 2023", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
+                ["Simplon", "7 Maart 2024", "Groningen", "Simplon", "https://simplon.nl/"],
+                ["Ep release party", "15 Maart 2024", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
             ],
         }
     },
