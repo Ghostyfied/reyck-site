@@ -28,8 +28,8 @@ export default {
     data() {
         return {
             concertArray: [
-                ["Simplon", "7 Maart 2024", "Groningen", "Simplon", "https://simplon.nl/"],
-                ["Ep release party", "15 Maart 2024", "Amsterdam", "Bitterzoet", "https://www.bitterzoet.com/"],
+                ["Oerknal bandnight", "8 Mei 2024", "Amsterdam", "Eetcafé Oerknal", "https://eetcafeoerknal.nl/"],
+                ["Orca Open Air", "13 Aug. 2024", "Utrecht", "Orca", "https://orcaroeien.nl/"],
             ],
         }
     },
