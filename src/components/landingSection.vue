@@ -1,10 +1,10 @@
 <template>
     <div class="landingWrapper">
         <div class="imageWrapper">
-            <img class="landingImage" src="../assets/Dansen-release-party.webp" />
-            <div class="spotify">
+            <img class="landingImage" src="../assets/reyck_header.webp" />
+            <!-- <div class="spotify">
                 <button class="button-49" @click="redirectToLink">Tickets</button>
-            </div>
+            </div> -->
         </div>
         <skewedC id="landingSkewed" color1="rgba(255,255,255,0)" color2="rgb(219,181,179)" orientation="counterClockwise"/>
     </div>
